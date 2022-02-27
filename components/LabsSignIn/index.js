@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import axios from "axios";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 function MyApp() {
   const router = useRouter();
+  const [object, setObject] = useLocalStorage("user", {});
   const [sidebar, setsidebar] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -34,10 +35,20 @@ function MyApp() {
     //   .then((r) => r.json());
     const data = await res.json();
     console.log(data);
+    if (data.success) {
+      setObject(data.user[0]);
+      // router.reload()
+      console.log(`dashboardlab/${data.user[0].labId}`);
+      router.push(`/dashboardlab/${data.user[0].labId}`);
+      // router.push("/");
+    } else {
+      alert("Invalid email or password");
+      // router.push("/");
+    }
   };
 
   return (
-    <div className="h-full bg-gradient-to-b from-sky-400 to-sky-200 w-full py-16 px-4">
+    <div className="h-full bg-conic-to-tr from-neutral-100 to-indigo-600 w-full py-16 px-4">
       <div className="flex flex-col items-center justify-center">
         <div className="rounded lg:w-1/3  md:w-1/2 w-full p-10 my-36">
           <div className="mb-6">
@@ -48,10 +59,10 @@ function MyApp() {
               aria-label="Login to your account"
               className="text-2xl font-extrabold leading-6 text-gray-800"
             >
-              SignUp for an Account
+              Login for an Account
             </p>
             <p className="text-sm mt-4 font-medium leading-none text-gray-500">
-              Already have an account?{" "}
+              Don't have an account?{" "}
               <button
                 tabIndex={0}
                 role="link"
@@ -59,7 +70,7 @@ function MyApp() {
                 aria-label="Sign up here"
                 className="text-sm font-medium leading-none underline text-gray-800 cursor-pointer"
               >
-                Login here
+                Signup here
               </button>
             </p>
           </div>

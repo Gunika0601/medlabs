@@ -1,8 +1,10 @@
 import React from "react";
 import { LockClosedIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 export default function Example() {
+  const [object, setObject] = useLocalStorage("user", {});
   const router = useRouter();
   const [email, setEmail] = React.useState();
   const [password, setPassword] = React.useState();
@@ -28,6 +30,14 @@ export default function Example() {
     });
     const data = await res.json();
     console.log(data);
+    if (data.success) {
+      setObject(data.user[0]);
+      // router.reload()
+      router.push(`/dashboarduser/${data.user[0].userId}`);
+    } else {
+      alert("Invalid email or password");
+      // router.push("/");
+    }
   };
 
   return (
@@ -117,7 +127,7 @@ export default function Example() {
             <div>
               <button
                 type="submit"
-                onClick={handleSubmit}
+                onClick={(e) => handleSubmit(e)}
                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 <span className="absolute left-0 inset-y-0 flex items-center pl-3">

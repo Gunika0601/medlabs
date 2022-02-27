@@ -1,11 +1,14 @@
 import React from "react";
 import { LockClosedIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 export default function Example() {
+  const [object, setObject] = useLocalStorage("user", {});
   const [email, setEmail] = React.useState();
   const [password, setPassword] = React.useState();
   const [fullName, setFullName] = React.useState();
+  const [username, setUserName] = React.useState();
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -23,11 +26,21 @@ export default function Example() {
           email,
           password,
           name: fullName,
+          username: username
         }),
       }
     );
     const data = await res.json();
     console.log(data);
+    if (data.success) {
+      setObject({
+        email,
+        password,
+        name: fullName,
+        username: username,
+      });
+      router.push(`/dashboarduser/${data.userId}`);
+    }
   };
 
   const handleClick = (e) => {
@@ -88,6 +101,21 @@ export default function Example() {
                   onChange={(e) => setFullName(e.target.value)}
                   className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                   placeholder="Full Name"
+                />
+              </div>
+              <div>
+                <label htmlFor="username" className="sr-only">
+                  Username
+                </label>
+                <input
+                  id="username"
+                  name="username"
+                  type="username"
+                  autoComplete="username"
+                  required
+                  onChange={(e) => setUserName(e.target.value)}
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  placeholder="Username"
                 />
               </div>
               <div>
