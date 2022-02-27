@@ -39,15 +39,15 @@ export default function IndexPage(props) {
       <div className="bg-gray-100 ">
         {/* Remove py-8 */}
         <div className="mx-auto container py-8">
-          <div className="flex flex-wrap items-center lg:justify-between justify-center">
+          <div className="flex flex-wrap items-center justify-center">
             {data?.map((item, index) => (
-              <div key={index}>
-                <div className="mx-2 w-72 lg:mb-0 mb-8">
+              <div key={index} className="">
+                <div className="mx-4 w-72 rounded bg-indigo-200 lg:mb-0 mb-8">
                   <div>
-                    <img className="w-full h-44" src={ titleArry[index] ?  titleArry[index].testImage : ""} />
+                    <img className="w-full h-44" src={ titleArry[index] ?  titleArry[index].testImage : 'https://i.imgur.com/Dzhqtfd.jpg'} />
                   </div>
-                  <div className="bg-white">
-                    <div className="flex items-center justify-between px-4 pt-4">
+                  <div className="">
+                    <div className="flex items-center px-4 pt-4">
                       <div>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -83,11 +83,11 @@ export default function IndexPage(props) {
 
                       <div className="flex items-center justify-between py-4">
                         <h2 className="text-indigo-700 font-semibold">
-                          TestName: { titleArry[index] ?  titleArry[index].testName : "not test name"}
+                          TestName: { titleArry[index] ?  titleArry[index].testName : "Sugar test"}
 
                         </h2>
                         <h3 className="text-indigo-700 text-xl font-semibold">
-                          Price: ₹ {titleArry[index] ?  titleArry[index].testPrice : 0}
+                          Price: ₹ {titleArry[index] ?  titleArry[index].testPrice : 400}
                         </h3>
                       </div>
                     </div>

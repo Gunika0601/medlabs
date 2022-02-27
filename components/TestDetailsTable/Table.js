@@ -20,7 +20,7 @@ export default function Example(props) {
     console.log("props:", props.data, testDetails);
   }, [props]);
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col p-5 rounded bg-indigo-200">
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
           <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
@@ -76,9 +76,6 @@ export default function Example(props) {
                     Date
                   </th>
 
-                  <th scope="col" className="relative px-6 py-3">
-                    <span className="sr-only">Edit</span>
-                  </th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
@@ -135,16 +132,9 @@ export default function Example(props) {
                                         </td> */}
 
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {testDetails[index] ? testDetails[index].createdAt.substring(0, 10): "Sugar test"}
+                      {testDetails[index] ? testDetails[index].createdAt.substring(0, 10): "28-02-2002"}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        <a
-                          href="#"
-                          className="text-indigo-600 hover:text-indigo-900"
-                        >
-                          Edit
-                        </a>
-                      </td>
+                      
                     </tr>
                   ))}
               </tbody>

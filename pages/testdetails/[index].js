@@ -1,7 +1,7 @@
 import React from 'react'
 
-import TestDetailsTable from "../../../components/TestDetailsTable/Table"
-import useLocalStorage from "../../../hooks/useLocalStorage";
+import TestDetailsTable from "../../components/TestDetailsTable/Table"
+import useLocalStorage from "../../hooks/useLocalStorage";
 const BrownPanwadi = () => {
     const [bookedTests, setBookedTest] = React.useState();
 

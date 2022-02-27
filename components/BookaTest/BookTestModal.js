@@ -57,6 +57,7 @@ export default function Example({ closeModal, labTestId, testId, userId }) {
     const data = await req.json();
 
     closeModal();
+    router.push(`/dashboarduser/${storedValue.userId}`)
   };
 
   return (

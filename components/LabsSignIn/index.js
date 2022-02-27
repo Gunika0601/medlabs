@@ -36,7 +36,8 @@ function MyApp() {
     if (data.success) {
       setObject(data.user[0]);
       // router.reload()
-      router.push(`/dashboardlab/${data.user[0].labId}`);
+      router.push(`/`)
+      router.reload();
       // router.push("/");
     } else {
       alert("Invalid email or password");

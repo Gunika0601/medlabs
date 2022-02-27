@@ -31,7 +31,8 @@ export default function Example() {
     if (data.success) {
       setObject(data.user[0]);
       // router.reload()
-      router.push(`/dashboarduser/${data.user[0].userId}`);
+      router.push(`/dashboarduser/${data.user[0].userId}`)
+      router.reload();
     } else {
       alert("Invalid email or password");
       // router.push("/");

@@ -4,18 +4,18 @@ export default function IndexPage(props) {
   const result = props?.data?.result;
   return (
     <>
-      <div className="bg-gray-100 ">
+      <div className="">
         {/* Remove py-8 */}
         <div className="mx-auto container py-8">
-          <div className="flex flex-wrap items-center lg:justify-between justify-center">
+          <div className="flex flex-wrap items-center  justify-center">
             {result?.map((item, index) => (
               <div key={index}>
-                <div className="mx-2 w-72 lg:mb-0 mb-8">
+                <div className="mx-2 w-72 lg:mb-0 mb-8 bg-indigo-200 rounded">
                   <div>
                     <img src={item.testImage} className="w-full h-44" />
                   </div>
-                  <div className="bg-white">
-                    <div className="flex items-center justify-between px-4 pt-4">
+                  <div className="">
+                    <div className="flex items-center  px-4 pt-4">
                       <div>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
