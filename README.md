@@ -19,12 +19,19 @@ Tech Stack used is
 - Javascript <img height="35" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">
 - Prisma <img height ="45"  src="https://avatars.githubusercontent.com/u/17219288?s=200&v=4">
 - HerokuDB <img height="35" src="https://avatars.githubusercontent.com/u/23211?s=200&v=4">
+- Postgress <img height="35" src="https://avatars.githubusercontent.com/u/177543?s=200&v=4">
 
 ---
  Team details
 - Team Code : 29653822dc
 - Team Name : Celestial Bytes
 - IsFresher: False
+ ### Team Members
+- Gunwant Wankhede
+- Soodit Kumar
+- Naman Singla
+- Gunika Verma
+- Niku Singh
 
 ---
 ### Description of Idea
@@ -43,7 +50,7 @@ What's next for MedLabs after the pandemic - As mentioned above, the severity in
 
 ---
 <!-- ### Images -->
-### Website Architectur Diagram
+### Website Architecture Diagram
 ![image](https://i.imgur.com/mb5v5HQ.png)
 ---
 
