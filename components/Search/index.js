@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import BookaTest from "../../components/BookaTest/BookTestModal";
 import useLocalStorage from "../../hooks/useLocalStorage";
+import { useRouter } from "next/router";
 
 const customStyles = {
   content: {
@@ -28,8 +29,21 @@ const Ordersum3 = ({ data }) => {
     setUserId(userId);
     setIsOpen(true);
   }
+  // const [storedValue] = useLocalStorage("user")
+
+  // const router = useRouter()
+
+  // const checkUser = () => {
+  //   if (!storedValue) {
+  //     alert("You are not logged in")
+  //     router.push('/login/usersignup')
+  //   }
+
+  // }
 
   function openModal() {
+    // console.log(storedValue)
+    // checkUser()
     setIsOpen(true);
   }
 

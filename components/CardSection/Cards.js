@@ -6,7 +6,7 @@ const Cards = () => {
   const [cardData, setCardData] = React.useState([])
 
   const getData = async () => {
-    const res = await fetch(`https://nathuram.ga/dashboardtests/4`)
+    const res = await fetch(`https://medlabs-backend.herokuapp.com/dashboardtests/4`)
     const data = await res.json()
     console.log(data)
     setCardData(data.result)

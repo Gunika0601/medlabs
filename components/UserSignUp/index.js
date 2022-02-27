@@ -39,7 +39,7 @@ export default function Example() {
         name: fullName,
         username: username,
       });
-      router.push(`/dashboarduser/${data.userId}`);
+      router.push(`/login/usersignin`);
     }
   };
 

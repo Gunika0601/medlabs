@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 function MyApp() {
   const router = useRouter();
   const [email, setEmail] = useState();
+  const [object, setObject] = useLocalStorage("user", {});
   const [password, setPassword] = useState();
   const [labName, setLabName] = useState();
   const [repPassword, setRepPassword] = useState();
@@ -31,6 +33,15 @@ function MyApp() {
       );
       const data = await res.json();
       console.log(data);
+      if (data.email) {
+        setObject(data);
+        // router.reload()
+        console.log(`dashboardlab/${data.labId}`);
+        router.push(`/dashboardlab/${data.labId}`);
+      } else {
+        alert("Invalid email or password");
+        // router.push("/");
+      }
     }
   };
 
@@ -131,10 +142,10 @@ function MyApp() {
             aria-label="Login to your account"
             className="text-4xl font-extrabold leading-6 text-gray-900"
           >
-            Login to your account
+            Signup to your account
           </p>
           <p className="text-sm mt-4 font-medium leading-none text-gray-500">
-            Dont have account?{" "}
+            Already have account?{" "}
             <button
               tabIndex={0}
               onClick={handleClick}
@@ -143,7 +154,7 @@ function MyApp() {
               className="text-sm font-medium leading-none underline text-gray-800 cursor-pointer"
             >
               {" "}
-              Sign up here
+              Login here
             </button>
           </p>
         </div>

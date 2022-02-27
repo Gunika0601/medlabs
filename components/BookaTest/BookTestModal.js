@@ -73,7 +73,7 @@ export default function Example({ closeModal, labTestId, testId, userId }) {
   };
 
   return (
-    <div className="max-w-6xl h-[38rem] sm:h-full">
+    <div className="max-w-6xl h-[38rem] sm:h-[43rem]">
       <div className="bg-white shadow overflow-hidden sm:rounded-lg">
         <div className="px-4 py-5 sm:px-6">
           <h3 className="text-lg leading-6 font-medium text-gray-900">
@@ -89,7 +89,7 @@ export default function Example({ closeModal, labTestId, testId, userId }) {
             <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Full name</dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                <input
+                <                input
                   type="text"
                   name="name"
                   id="name"
@@ -102,7 +102,7 @@ export default function Example({ closeModal, labTestId, testId, userId }) {
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Email</dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                <input
+                <                      input
                   type="text"
                   name="email"
                   id="email"
@@ -116,7 +116,7 @@ export default function Example({ closeModal, labTestId, testId, userId }) {
               <dt className="text-sm font-medium text-gray-500">Gender</dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                 <div className="flex items-center justify-start">
-                  <input
+                  <                              input
                     type="radio"
                     name="homeCollection"
                     id="male"
@@ -125,7 +125,7 @@ export default function Example({ closeModal, labTestId, testId, userId }) {
                     onChange={(e) => setGender(e.target.value)}
                   />{" "}
                   <span className="mr-10">Male</span>
-                  <input
+                  <                                input
                     type="radio"
                     name="homeCollection"
                     id="female"
@@ -142,7 +142,7 @@ export default function Example({ closeModal, labTestId, testId, userId }) {
                 Phone Number
               </dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                <input
+                <                                      input
                   type="text"
                   name="phone"
                   id="phone"
@@ -155,7 +155,7 @@ export default function Example({ closeModal, labTestId, testId, userId }) {
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Age</dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                <input
+                <                                            input
                   type="number"
                   name="age"
                   id="age"
@@ -168,7 +168,7 @@ export default function Example({ closeModal, labTestId, testId, userId }) {
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Height</dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                <input
+                <                                                  input
                   type="number"
                   name="height"
                   id="height"
@@ -181,7 +181,7 @@ export default function Example({ closeModal, labTestId, testId, userId }) {
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Weight</dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                <input
+                <                                                        input
                   type="number"
                   name="weight"
                   id="weight"
@@ -194,7 +194,7 @@ export default function Example({ closeModal, labTestId, testId, userId }) {
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Blood group</dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                <input
+                <                                                              input
                   type="text"
                   name="bloodGroup"
                   id="bloodGroup"
@@ -207,7 +207,7 @@ export default function Example({ closeModal, labTestId, testId, userId }) {
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Address</dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                <input
+                <                                                                    input
                   type="text"
                   name="address"
                   id="address"
