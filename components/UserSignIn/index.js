@@ -32,7 +32,7 @@ export default function Example() {
       setObject(data.user[0]);
       // router.reload()
       router.push(`/dashboarduser/${data.user[0].userId}`)
-      router.reload();
+      ;
     } else {
       alert("Invalid email or password");
       // router.push("/");

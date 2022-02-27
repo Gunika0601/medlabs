@@ -115,6 +115,7 @@ const Ordersum3 = ({ data }) => {
                       onClick={() =>
                         sabkaBaap(item.labTestId, item.testId, item.userId)
                       }
+                      
                       className="flex justify-end space-x-8 items-start w-full"
                     >
                       <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
@@ -127,6 +128,10 @@ const Ordersum3 = ({ data }) => {
                 </div>
               );
             })}
+
+            {
+              data ? <p className="text-lg text-center">No results found!! search for key works</p>: <p></p>
+            }
           </div>
         </div>
       </div>
