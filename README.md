@@ -61,8 +61,9 @@ What's next for MedLabs after the pandemic - As mentioned above, the severity in
 - Ability to contact the lab after booking test via a chat bot .
 ---
 
-![image](https://user-images.githubusercontent.com/64721638/155871198-1f3fba16-d0f0-4acb-9e7d-bcc832cdf52e.png)
-
+### Website Preview
+<img height=245 src="https://i.imgur.com/rLNyuPF.png">
+<img height=245 src="https://i.imgur.com/ZwayxSe.png">
 ---
 Video link/embed
 
