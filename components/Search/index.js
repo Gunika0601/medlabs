@@ -23,7 +23,6 @@ const Ordersum3 = ({ data }) => {
   const [userId, setUserId] = React.useState();
 
   function sabkaBaap(labTestId, testId, userId) {
-    console.log({ labTestId, testId, userId });
     setLabId(labTestId);
     setTestId(testId);
     setUserId(userId);
@@ -42,20 +41,15 @@ const Ordersum3 = ({ data }) => {
   // }
 
   function openModal() {
-    // console.log(storedValue)
     // checkUser()
     setIsOpen(true);
   }
 
-  function merPyaraFunksan(id) {
-    console.log(id);
-  }
 
   function closeModal() {
     setIsOpen(false);
   }
 
-  // console.log(data);
   return (
     <>
       <Modal
@@ -71,7 +65,6 @@ const Ordersum3 = ({ data }) => {
           userId={userId}
         />
       </Modal>
-      {JSON.stringify(data, null, 2)}
       <div className="py-14 px-4 md:px-6 max-w-5xl  flex mx-auto">
         <div className="mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch  w-full xl:space-x-8 space-y-4 md:space-y-6 xl:space-y-0">
           <div className="flex flex-col justify-start items-start w-full space-y-4 md:space-y-6 xl:space-y-8">

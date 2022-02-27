@@ -15,7 +15,6 @@ function MyApp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("por que maria", email, password);
     const res = await fetch("https://medlabs-backend.herokuapp.com/lablogin", {
       method: "POST",
       headers: {
@@ -34,11 +33,9 @@ function MyApp() {
     //   })
     //   .then((r) => r.json());
     const data = await res.json();
-    console.log(data);
     if (data.success) {
       setObject(data.user[0]);
       // router.reload()
-      console.log(`dashboardlab/${data.user[0].labId}`);
       router.push(`/dashboardlab/${data.user[0].labId}`);
       // router.push("/");
     } else {
@@ -48,10 +45,15 @@ function MyApp() {
   };
 
   return (
-    <div className="h-full bg-conic-to-tr from-neutral-100 to-indigo-600 w-full py-16 px-4">
+    <div className="h-full bg-conic-to-tr from-neutral-100 to-indigo-600 w-full py-10 px-4">
       <div className="flex flex-col items-center justify-center">
         <div className="rounded lg:w-1/3  md:w-1/2 w-full p-10 my-36">
           <div className="mb-6">
+          <img
+              className="mx-auto h-13 w-auto"
+              src="https://i.imgur.com/xETNmGm.jpg"
+              alt="Workflow"
+            />
             <p
               tabIndex={0}
               role="heading"
@@ -62,7 +64,7 @@ function MyApp() {
               Login for an Account
             </p>
             <p className="text-sm mt-4 font-medium leading-none text-gray-500">
-              Don't have an account?{" "}
+              Dont have an account?{" "}
               <button
                 tabIndex={0}
                 role="link"

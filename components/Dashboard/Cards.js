@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export default function IndexPage(props) {
-  console.log(props.data.result);
   const result = props?.data?.result;
   return (
     <>

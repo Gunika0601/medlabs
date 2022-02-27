@@ -12,7 +12,6 @@ function MyApp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("por que maria", email, password, labName, repPassword);
     if (password !== repPassword) {
       alert("Passwords do not match");
     } else {
@@ -32,15 +31,11 @@ function MyApp() {
         }
       );
       const data = await res.json();
-      console.log(data);
       if (data.email) {
         setObject(data);
-        // router.reload()
-        console.log(`dashboardlab/${data.labId}`);
         router.push(`/dashboardlab/${data.labId}`);
       } else {
         alert("Invalid email or password");
-        // router.push("/");
       }
     }
   };
@@ -135,6 +130,11 @@ function MyApp() {
         </div> */}
       <div className="max-w-xl p-3 mx-auto">
         <div className="mb-6">
+        {/* <img
+              className="mx-auto h-12 w-auto"
+              src="https://i.imgur.com/xETNmGm.jpg"
+              alt="Workflow"
+            /> */}
           <p
             tabIndex={0}
             role="heading"

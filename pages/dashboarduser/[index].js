@@ -44,15 +44,8 @@ export async function getServerSideProps(context) {
 }
 
 export default function Example({ data }) {
-  // console.log(data);
-  // const { asPath, pathname } = useRouter();
-  // var ret = asPath.replace('/dashboard/','');
-  // console.log(asPath);
-  // console.log(ret);
-  // console.log(pathname);
-  // const router = useRouter();
-  // const { pid } = router.query;
-  // console.log(router.query.index);
+
+  
   return (
     <>
       <div className="min-h-full">

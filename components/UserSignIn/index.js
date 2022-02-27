@@ -16,7 +16,6 @@ export default function Example() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("por que maria", email, password);
     const res = await fetch("https://medlabs-backend.herokuapp.com/userlogin", {
       method: "POST",
       headers: {
@@ -29,7 +28,6 @@ export default function Example() {
       }),
     });
     const data = await res.json();
-    console.log(data);
     if (data.success) {
       setObject(data.user[0]);
       // router.reload()
@@ -45,9 +43,9 @@ export default function Example() {
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
-            <img
-              className="mx-auto h-12 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+          <img
+              className="mx-auto h-15 w-auto"
+              src="https://i.imgur.com/xETNmGm.jpg"
               alt="Workflow"
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">

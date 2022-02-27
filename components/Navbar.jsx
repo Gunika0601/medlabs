@@ -3,38 +3,41 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { PlusSmIcon } from "@heroicons/react/solid";
 import Link from "next/link";
-import { useRouter } from 'next/router'
+import useLocalStorage from "../hooks/useLocalStorage";
+import { useRouter } from "next/router";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Example() {
-  const router = useRouter()
+  const [storedValue] = useLocalStorage("user");
+  const router = useRouter();
   const [data, setData] = useState();
+
   const getDataFromLocalStorage = () => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const data = localStorage.getItem("user");
       if (data) {
         setData(JSON.parse(data));
       }
       return JSON.parse(data);
     }
-  }
+  };
+
   React.useEffect(() => {
     getDataFromLocalStorage();
-    console.log(data);
   }, []);
 
   function mujheDabao() {
-    console.log("mujhe dabao");
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       localStorage.removeItem("user");
       router.push("/");
+      setData(null);
     }
   }
   return (
-    <Disclosure as="nav" className="bg-white shadow">
+    <Disclosure as="nav"  className="backdrop-blur-md shadow sticky top-0 z-40">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,32 +69,38 @@ export default function Example() {
                   </div>
                 </Link>
 
-                <div className="hidden md:ml-6 md:flex md:space-x-8">
+                <div className="hidden pt-5 md:ml-6 md:flex md:space-x-8">
                   {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-                  <a
-                    href="#"
-                    className="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  <Link
+                    href="/"
+                    className="border-indigo-500 text-gray-900 inline-flex items-center px-1 border-b-2 text-sm font-medium"
                   >
-                    Dashboard
-                  </a>
-                  <a
-                    href="#"
+                    Home
+                  </Link>
+                  {storedValue && (
+                    <a
                     className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                  >
-                    Team
-                  </a>
-                  <a
+                      href={
+                        storedValue.userId
+                          ? `/dashboarduser/${storedValue.userId}`
+                          : `/dashboardlab/${storedValue.labId}`
+                      }
+                    >
+                      Dashboard
+                    </a>
+                  )}
+                  {/* <a
                     href="#"
                     className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                   >
                     Projects
-                  </a>
-                  <a
+                  </a> */}
+                  {/* <a
                     href="#"
                     className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                   >
                     Calendar
-                  </a>
+                  </a> */}
                 </div>
               </div>
               <div className="flex items-center">
@@ -117,14 +126,19 @@ export default function Example() {
                             <Menu.Item>
                               {({ active }) => (
                                 <button>
-                                  <a
+                                  <Link
+                                    href={
+                                      storedValue.userId
+                                        ? `/dashboarduser/${storedValue.userId}`
+                                        : `/dashboardlab/${storedValue.labId}`
+                                    }
                                     className={classNames(
                                       active ? "bg-gray-100" : "",
                                       "block px-4 py-2 text-sm text-gray-700"
                                     )}
                                   >
                                     Dashboard
-                                  </a>
+                                  </Link>
                                 </button>
                               )}
                             </Menu.Item>
@@ -195,8 +209,8 @@ export default function Example() {
                             </Menu.Items>
                           </Transition>
                         </div>
-                      </>)}
-
+                      </>
+                    )}
                   </Menu>
                 </div>
                 <div className="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center">
@@ -219,26 +233,26 @@ export default function Example() {
                 href="#"
                 className="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
               >
-                Dashboard
+                Home
               </a>
               <a
                 href="#"
                 className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
               >
-                Team
+                Dashboard
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
               >
                 Projects
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="#"
                 className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
               >
                 Calendar
-              </a>
+              </a> */}
             </div>
           </Disclosure.Panel>
         </>

@@ -10,7 +10,6 @@ export default function Example({ labId, closeModal }) {
 
   // const [labTestId, setLabTestId] = useState();
   const labTestId = parseInt(labId);
-  console.log(labTestId);
 
   // const router = useRouter()
 
@@ -49,17 +48,6 @@ export default function Example({ labId, closeModal }) {
 
     });
     const data = await res.data.data;
-    // const data = await res.json();
-    // console.log(data);
-    // console.log(res);
-    // console.log("RAUL", {
-    //   testName: testName,
-    //   testPrice: parseInt(testPrice),
-    //   testDescription: testDescription,
-    //   homeCollection: homeCollection === "true" ? true : false,
-    //   testImage: testImage,
-    //   labTestId: parseInt(labTestId),
-    // });
     closeModal()
 
   };

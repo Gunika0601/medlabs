@@ -45,14 +45,10 @@ export async function getServerSideProps(context) {
   const req = context;
 
   const id = req.params.index;
-  console.log(typeof id);
-
-  // console.log(req.headers);
   const res = await fetch(
     `https://medlabs-backend.herokuapp.com/getalltest/${id}`
   );
   const data = await res.json();
-  // console.log(data);
   return {
     props: {
       data: data,
@@ -70,19 +66,14 @@ export default function Example({ data }) {
   function closeModal() {
     setIsOpen(false);
   }
-  // console.log(data);
-  // const { asPath, pathname } = useRouter();
-  // var ret = asPath.replace('/dashboard/','');
-  // console.log(asPath);
-  // console.log(ret);
-  // console.log(pathname);
+
   const router = useRouter();
-  // console.log(router.query.index);
+ 
   useEffect(() => {
     const reqId = router?.query?.index;
     setLabId(reqId);
   }, [router.query.index]);
-  console.log(labId);
+
   return (
     <>
       {/* MODAL STARTS HERE */}
@@ -120,6 +111,7 @@ export default function Example({ data }) {
                 <Cards data={data} />
               </div>
             </div>
+
             {/* /End replace */}
           </div>
         </main>

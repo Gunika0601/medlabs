@@ -6,7 +6,6 @@ export default function Example() {
   const [input, setInput] = React.useState();
 
   React.useEffect(() => {
-    console.log(router.query.index);
     if (router.query.index !== undefined) {
       setInput(router.query.index);
     }
