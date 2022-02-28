@@ -68,6 +68,6 @@ What's next for MedLabs after the pandemic - As mentioned above, the severity in
 Video link/embed
 
 
-- https://www.loom.com/share/26686c899a0d4b4fb318720a4cf0dd3b
+- https://loom.com/share/2486c13f629f46d583b2a928459648cd
  
  
