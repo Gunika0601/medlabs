@@ -8,25 +8,20 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details. -->
  
- # Team Celestial Bytes
-## Idea - Medlabs
+ # ✨Team Celestial Bytes 
+## 🦄Idea - Medlabs
+<img height="120" src="https://i.imgur.com/FKKJNDo.png">
+<a href="https://medlabs-one.vercel.app/"> Website link</a>
 
-Tech Stack used is 
-- NodeJs <img height="35" src="https://avatars.githubusercontent.com/u/9950313?s=200&v=4">
-- Tailwind CSS <img height = "35" src="https://avatars.githubusercontent.com/u/67109815?s=200&v=4">
-- Next JS <img height="35" src="https://cdn.auth0.com/blog/logos/nextjs-logo.png">
-- Express <img height="35" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png">
-- Javascript <img height="35" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">
-- Prisma <img height ="45"  src="https://avatars.githubusercontent.com/u/17219288?s=200&v=4">
-- HerokuDB <img height="35" src="https://avatars.githubusercontent.com/u/23211?s=200&v=4">
-- Postgress <img height="35" src="https://avatars.githubusercontent.com/u/177543?s=200&v=4">
+### Tech Stack used is 
+<img height="45" style="padding-right:10px" src="https://i.imgur.com/cr7jaOm.png">  <img height="45" src="https://i.imgur.com/rHwnWZz.png"><img height = "55" src="https://avatars.githubusercontent.com/u/67109815?s=200&v=4">  <img height="45"  src="https://avatars.githubusercontent.com/u/9950313?s=200&v=4">  <img height="45" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png">  <img height ="45"  src="https://avatars.githubusercontent.com/u/17219288?s=200&v=4">  <img height="45" src="https://avatars.githubusercontent.com/u/23211?s=200&v=4">  <img height="35" src="https://avatars.githubusercontent.com/u/177543?s=200&v=4">
 
 ---
- Team details
+## 🌟Team Details
 - Team Code : 29653822dc
 - Team Name : Celestial Bytes
 - IsFresher: False
- ### Team Members
+ ### 👷Team Members
 - Gunwant Wankhede
 - Soodit Kumar
 - Naman Singla
@@ -34,7 +29,7 @@ Tech Stack used is
 - Niku Singh
 
 ---
-### Description of Idea
+### ✍️Description of Idea
 
 - **IDea** : A unified platform for medical laboratories and test centres
 - **Problem** : Unorganized healhcare industry especially when it comes to tests
@@ -50,11 +45,11 @@ What's next for MedLabs after the pandemic - As mentioned above, the severity in
 
 ---
 <!-- ### Images -->
-### Website Architecture Diagram
+### 🌐Website Architecture Diagram
 ![image](https://i.imgur.com/mb5v5HQ.png)
 ---
 
-### Features that can be implemented in future are:
+### 🔭Features that can be implemented in future are:
 - Rating from patients on particular labs and their tests.
 - Improving the search result by adding a filter according to the location of the lab and user.
 - In app test result provision.
@@ -62,11 +57,49 @@ What's next for MedLabs after the pandemic - As mentioned above, the severity in
 ---
 
 ### Website Preview
-<img height=245 src="https://i.imgur.com/rLNyuPF.png">
-<img height=245 src="https://i.imgur.com/ZwayxSe.png">
----
-Video link/embed
+<table width=33% align="left">
+      <tr>
+          <td align="center">
+             <p>Landing Page</p>
+             <img src="https://i.imgur.com/9Dr2wL8.png"/>
+          </td>
+          <td align="center">
+              <p>Checkout page</p>
+             <img src="https://i.imgur.com/Agpwt2X.png"/>
+          </td>
+          <td align="center">
+              <p>Search Result Page</p>
+             <img src="https://i.imgur.com/XQovokC.png"/>
+          </td>
+      </tr>
+       <tr>
+          <td align="center">
+             <p>Patients Dashboard</p>
+             <img src="https://i.imgur.com/q3m6Jzs.png"/>
+          </td>
+          <td align="center">
+              <p>Patients Booking</p>
+             <img src="https://i.imgur.com/uKTbIqd.png"/>
+          </td>
+      </tr>
+      <tr>
+          <td align="center">
+             <p>Lab Dashboard</p>
+             <img src="https://i.imgur.com/JrI1Wpx.png"/>
+          </td>
+          <td align="center">
+              <p>Labs add a test</p>
+             <img src="https://i.imgur.com/HaqcfRW.png"/>
+          </td>
+        <td align="center">
+              <p>Labs management tool</p>
+             <img src="https://i.imgur.com/unMwlDm.png"/>
+          </td>
+      </tr>
+</table>
 
+---
+### Video preview
 
 - https://loom.com/share/2486c13f629f46d583b2a928459648cd
  
