@@ -25,7 +25,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Gunwant Wankhede
 - Soodit Kumar
 - Naman Singla
-- Gunika Verma
+- Gunika
 - Niku Singh
 
 ---
